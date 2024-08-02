@@ -1,4 +1,4 @@
-const OPENAI_API_HOST = "cn-sz-yd-plustmp2.natfrp.cloud:48787";
+const OPENAI_API_HOST = "120.233.26.237:48787";
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
