@@ -1,9 +1,13 @@
-const OPENAI_API_HOST = "cn-sz-yd-plustmp2.natfrp.cloud:48787";
+const OPENAI_API_HOST = "cn-sz-yd-plustmp2.natfrp.cloud";
+const OPENAI_API_PORT = "48787"
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
-  url.hostname = OPENAI_API_HOST;
-
+  
+  url.host = OPENAI_API_HOST;
+  if(OPENAI_API_PORT){
+    url.port = OPENAI_API_PORT
+  }
   const newRequest = new Request(url.toString(), {
     headers: request.headers,
     method: request.method,
