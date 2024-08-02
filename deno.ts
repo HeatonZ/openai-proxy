@@ -2,7 +2,7 @@ const OPENAI_API_HOST = "120.233.26.237:48787";
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
-  url.host = OPENAI_API_HOST;
+  url.hostname = OPENAI_API_HOST;
 
   const newRequest = new Request(url.toString(), {
     headers: request.headers,
