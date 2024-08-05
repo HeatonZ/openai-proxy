@@ -15,5 +15,6 @@ Deno.serve(async (request) => {
     body: request.body,
     redirect: "follow",
   });
+  return new Response(url.toString());
   return fetch(newRequest);
 });
