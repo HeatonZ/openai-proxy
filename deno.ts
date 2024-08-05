@@ -1,6 +1,6 @@
 const OPENAI_API_HOST = "www.u1760361.nyat.app";
 // const OPENAI_API_HOST = "120.233.26.237";
-const OPENAI_API_PORT = "48787"
+const OPENAI_API_PORT = 48787
 
 Deno.serve(async (request) => {
   const url = new URL(request.url);
